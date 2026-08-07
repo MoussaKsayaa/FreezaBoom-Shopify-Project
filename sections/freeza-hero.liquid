@@ -1,0 +1,127 @@
+{{ "freeza-hero.css" | asset_url | stylesheet_tag }}
+{{ 'freeza-components.css' | asset_url | stylesheet_tag }}
+
+<div class="freeza-hero-section">
+  <div class="container">
+    <div class="hero-details">
+      <div class="hero-text">
+        <p class="text-1">Real Fruit, Ice Cold, Pure Boom.⚡</p>
+        <h1 class="title">Freeze<br> The Moment.<br><span>Feel The Boom!</span>
+        </h1>
+        <p class="text-2">Explosive energy drink made with real fruit, natural flavors and zero compromise.</p>
+        <div class="CTA-hero">
+          {% render "freeza-btn"
+            , text: 'Shop Now <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#000000" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path></svg>'
+            , url: "#"
+            , style: 'primary' %}
+          {% render 'freeza-btn'
+            , text: 'Explore Flavors'
+            , url: '#'
+            , style: 'secondary' %}
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="image-container">
+          <div class="image-bg">
+            <div class="water-splash">
+              <img
+                src="{{'clear-water-splash.png' | asset_url}}"
+                alt="water splash"
+                width="500"
+                height="500"
+              />
+            </div>
+            <div class="watermelon-chunks bg-element">
+              <img
+              src="{{ 'watermelon-chunks.png' | asset_url }}"
+              alt="watermelon chunks"
+              width="500"
+              height="500"
+              />
+            </div>
+            <div class="mango-chunks bg-element">
+              <img
+              src="{{ 'mango-chunks.png' | asset_url }}"
+              alt="mango chunks"
+              width="500"
+              height="500"
+              />
+            </div>
+            <div class="mint-leaves bg-element">
+              <img
+              src="{{ 'mint-leaves.png' | asset_url }}"
+              alt="mint leaves"
+              width="500"
+              height="500"
+              />
+            </div>
+            <div class="lime-chunks bg-element">
+              <img
+              src="{{ 'lime-chunks.png' | asset_url }}"
+              alt="lime chunks"
+              width="500"
+              height="500"
+              />
+            </div>
+            <div class="ice-cube-1 bg-element">
+              <img
+              src="{{ 'ice-cube-1.png' | asset_url }}"
+              alt="ice cube"
+              width="500"
+              height="500"
+              />
+            </div>
+            <div class="ice-cube-2 bg-element">
+              <img
+              src="{{ 'ice-cube-2.png' | asset_url }}"
+              alt="ice cube"
+              width="500"
+              height="500"
+              />
+            </div>
+            <div class="ice-cube-3 bg-element">
+              <img
+              src="{{ 'ice-cube-3.png' | asset_url }}"
+              alt="ice cube"
+              width="500"
+              height="500"
+              />
+            </div>
+            <div class="ice-cube-3-2 bg-element">
+              <img
+              src="{{ 'ice-cube-3.png' | asset_url }}"
+              alt="ice cube"
+              width="500"
+              height="500"
+              />
+            </div>
+            <div class="ice-cube-3-3 bg-element">
+              <img
+              src="{{ 'ice-cube-3.png' | asset_url }}"
+              alt="ice cube"
+              width="500"
+              height="500"
+              />
+            </div>
+          </div>
+          <div class="image-holder"><img
+              src="{{'freezaboom-lemon-juice.png' | asset_url }}"
+              width="500"
+              height="500"
+              alt="FreezaBoom lemon juice product" ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Freeza Hero",
+    "settings": [],
+    "presets": [
+      {
+        "name": "Freeza Hero"
+      }
+    ]
+  }
+{% endschema %}

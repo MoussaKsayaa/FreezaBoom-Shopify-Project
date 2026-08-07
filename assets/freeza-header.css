@@ -1,0 +1,75 @@
+.header .header__columns {
+    border-radius: 30px;
+    background-color: transparent;
+    border: 2px solid white;
+    margin-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    position: relative;
+    box-shadow: 0 0 14px 2px rgb(200 241 75 / 42%),
+                0 5px 18px rgb(91 214 255 / 18%);
+}
+.header .header__columns::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    z-index: -1;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    background-color: #dff8ffb5;
+    background-image: linear-gradient(to bottom, white, #eafaffc7, white);
+    border-radius: 30px;
+}
+.menu-list .menu-list__list-item:not(:first-of-type) {
+    margin-inline-start: 15px;
+}
+.menu-list .menu-list__list-item:not([slot='overflow']) {
+    position: relative;
+}
+.menu-list .menu-list__list-item:not([slot='overflow'])::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    margin-bottom: calc(-1 * var(--header-padding));
+    background-color: var(--color-primary);
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+.menu-list .menu-list__link-title {
+    font-size: 16px;
+}
+.menu-list:not(:has(.menu-list__list-item:hover)) .menu-list__link--active,
+.menu-list .menu-list__list-item:where(:hover, :focus-within) .menu-list__link,
+.menu-list .menu-list__list-item[slot='overflow'] .menu-list__link[aria-expanded='true'] {
+    color: var(--color-primary-dark);
+}
+.menu-list .menu-list__list-item:not([slot='overflow']):where(:hover, :focus-within)::after {
+    width: 100%;
+}
+.header__column--right .header-actions__cart-icon svg {
+    fill: black;
+    color: black;
+    transition: 0.3s;
+}
+.header .header__column--right .search-action button:hover,
+.header .header__column--right .account-button:hover .account-button__icon,
+.header .header__column--right .account-button:hover .account-button__text,
+.header .header__column--right .header-actions__cart-icon:hover svg {
+    color: var(--color-primary);
+    fill: var(--color-primary); 
+}
+.header .header__column .header-logo {
+    scale: 1.5;
+    width: fit-content;
+    margin: 0;
+}
+@media (max-width: 750px) {
+    .header .header__column .header-logo {
+        scale: 2;
+        margin: 0 auto;
+    }
+}
