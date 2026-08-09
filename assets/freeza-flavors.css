@@ -1,0 +1,61 @@
+.freeza-flavors {
+    padding: 50px 0;
+    position: relative;
+    overflow: hidden;
+}
+.freeza-flavors .sec-header {
+    text-align: center;
+}
+.freeza-flavors .sec-header .bg-icons .ice-cube_1,
+.freeza-flavors .sec-header .bg-icons .ice-cube_2 {
+    position: absolute;
+    width: 100px;
+}
+.freeza-flavors .sec-header .bg-icons .ice-cube_1 {
+    left: -30px;
+    top: 120px;
+    rotate: 30deg;
+}
+.freeza-flavors .sec-header .bg-icons .ice-cube_2 {
+    right: -20px;
+    top: 80px;
+}
+.freeza-flavors .sec-header .bg-icons .tree-leaf_1,
+.freeza-flavors .sec-header .bg-icons .tree-leaf_2 {
+    position: absolute;
+    width: 60px;
+}
+.freeza-flavors .sec-header .bg-icons .tree-leaf_1 {
+    left: -30px;
+    top: 220px;
+    rotate: 90deg;
+}
+.freeza-flavors .sec-header .bg-icons .tree-leaf_2 {
+    right: -30px;
+    top: 200px;
+    rotate: -40deg;
+}
+.freeza-flavors .sec-header .sub-title {
+    color: var(--color-primary);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.freeza-flavors .sec-header .title {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 10px;
+}
+.freeza-flavors .sec-header .title span {
+    color: var(--color-primary);
+}
+.freeza-flavors .sec-header p {
+    margin: 0;
+    font-size: 12px;
+}
+.freeza-flavors .body {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    padding-top: 20px;
+    gap: 20px;
+}
+

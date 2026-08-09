@@ -9,6 +9,16 @@
  */
 {
   "sections": {
+    "freeza_hero_RrACXq": {
+      "type": "freeza-hero",
+      "name": "Freeza Hero",
+      "settings": {}
+    },
+    "freeza_flavors_KXKyL9": {
+      "type": "freeza-flavors",
+      "name": "FreezaBoom Flavors",
+      "settings": {}
+    },
     "product_list_fa6P9H": {
       "type": "product-list",
       "blocks": {
@@ -207,15 +217,11 @@
         "padding-block-start": 48,
         "padding-block-end": 48
       }
-    },
-    "freeza_hero_RrACXq": {
-      "type": "freeza-hero",
-      "name": "Freeza Hero",
-      "settings": {}
     }
   },
   "order": [
     "freeza_hero_RrACXq",
+    "freeza_flavors_KXKyL9",
     "product_list_fa6P9H"
   ]
 }

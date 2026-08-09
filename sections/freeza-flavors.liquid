@@ -1,0 +1,67 @@
+{{ "freeza-flavors.css" | asset_url | stylesheet_tag }}
+
+
+<div class="freeza-flavors">
+    <div class="container">
+        <div class="sec-header">
+            <span class="sub-title">⚡Flavor Experience⚡</span>
+            <h2 class="title">Explore The Flavors<br/><span>Feel The Boom!</span></h2>
+            <p>Every sip delivers an explosion of real fruit flavor,<br/>ice-cold refreshment, and unstoppable energy.</p>
+            <div class="bg-icons">
+                <div class="ice-cube_1"><img src="{{ 'ice-cube-1.png' |  asset_url }}" width="500" height="500" alt="" /></div>
+                <div class="ice-cube_2"><img src="{{ 'ice-cube-2.png' |  asset_url }}" width="500" height="500" alt="" /></div>
+                <div class="tree-leaf_1"><img src="{{ 'tree-leaf.png' |  asset_url }}" width="500" height="500" alt="" /></div>
+                <div class="tree-leaf_2"><img src="{{ 'tree-leaf.png' |  asset_url }}" width="500" height="500" alt="" /></div>
+            </div>
+        </div>
+        <div class="body">
+            {% for block in section.blocks %}
+                {% render "freeza-flavor-card", product_image: block.settings.product.featured_image, product_name: block.settings.product.title, product_info: block.settings.product_info, bg_color: block.settings.bg_color, shopify_attr: block.shopify_attributes, splash_img: block.settings.splash_img, fruit_chunks_1: block.settings.fruit_chunks_1 %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "FreezaBoom Flavors",
+    "settings": [],
+    "blocks": [{
+        "name": "Product Card",
+        "type": "flavor",
+        "settings": [
+            {
+                "type": "product",
+                "id": "product",
+                "label": "Product"
+            },
+            {
+                "type": "text",
+                "id": "product_info",
+                "label": "Product Info",
+                "info": "Keep the Info Short to Keep Design Beautiful"
+            },
+            {
+                "type": "color",
+                "id": "bg_color",
+                "label": "Background Color",
+                "default": "#E9F9D9"
+            },
+            {
+                "type": "image_picker",
+                "id": "splash_img",
+                "label": "Splash Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "fruit_chunks_1",
+                "label": "Fruit Chunks 1"
+            }
+        ],
+        "limit": 4
+    }],
+    "presets": [{
+        "name": "FreezaBoom Flavors"
+    }]
+}
+{% endschema %}

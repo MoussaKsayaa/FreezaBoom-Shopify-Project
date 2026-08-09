@@ -1,0 +1,28 @@
+
+
+<div class="freeza-flavor-card" {{ shopify_attr }}>
+    <div class="product-image" style="background-color: {{bg_color}}">
+        {%  if splash_img %}
+            <div class="splash-img"><img src="{{ splash_img | image_url: width: 500 }}" width="500" height="500" alt="spalsh" /></div>
+        {% endif %}
+        {% if fruit_chunks_1 %}
+            <div class="fruit-chunks_1"><img src="{{ fruit_chunks_1 |  image_url: width: 500  }}" width="500" height="500" alt="" /></div>
+            <div class="fruit-chunks_2"><img src="{{ fruit_chunks_1 |  image_url: width: 500  }}" width="500" height="500" alt="" /></div>
+        {% endif %}
+        <div class="ice-cube_1"><img src="{{ 'ice-cube-1.png' |  asset_url }}" width="500" height="500" alt="" /></div>
+        <div class="ice-cube_2"><img src="{{ 'ice-cube-2.png' |  asset_url }}" width="500" height="500" alt="" /></div>
+        <div class="image-holder">
+            {% if product_image %}
+                <img src="{{product_image | image_url: width: 500}}" width="500" height="500" alt="product iamge">
+            {% endif %}
+        </div>
+    </div>
+    <div class="product-details">
+        <h3 class="title">{{ product_name }}</h3>
+        {% if product_info != "" %}
+            <p class="info">{{ product_info }}</p>
+        {% endif %}
+        <div class="CTA-btn">{% render 'freeza-btn', url:'#', style:'secondary', text:'Discover', arrow: true %}</div>
+    </div>
+</div>
+

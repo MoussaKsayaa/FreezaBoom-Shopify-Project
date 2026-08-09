@@ -1,5 +1,4 @@
 {{ "freeza-hero.css" | asset_url | stylesheet_tag }}
-{{ 'freeza-components.css' | asset_url | stylesheet_tag }}
 
 <div class="freeza-hero-section">
   <div class="container">
@@ -11,9 +10,9 @@
         <p class="text-2">Explosive energy drink made with real fruit, natural flavors and zero compromise.</p>
         <div class="CTA-hero">
           {% render "freeza-btn"
-            , text: 'Shop Now <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#000000" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path></svg>'
+            , text: 'Shop Now'
             , url: "#"
-            , style: 'primary' %}
+            , style: 'primary', arrow: true %}
           {% render 'freeza-btn'
             , text: 'Explore Flavors'
             , url: '#'
@@ -116,11 +115,11 @@
 </div>
 {% schema %}
   {
-    "name": "Freeza Hero",
+    "name": "FreezaBoom Hero",
     "settings": [],
     "presets": [
       {
-        "name": "Freeza Hero"
+        "name": "FreezaBoom Hero"
       }
     ]
   }
