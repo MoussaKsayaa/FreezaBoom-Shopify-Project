@@ -58,4 +58,8 @@
     padding-top: 20px;
     gap: 20px;
 }
-
+@media (max-width: 768px) {
+    .freeza-flavors .body {
+        padding: 30px 20px;
+    }
+}

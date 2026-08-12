@@ -16,6 +16,54 @@
     },
     "freeza_flavors_KXKyL9": {
       "type": "freeza-flavors",
+      "blocks": {
+        "flavor_JqKeyM": {
+          "type": "flavor",
+          "settings": {
+            "product": "freezaboom-lemon-juice-330ml",
+            "product_info": "Classic lemon with a zesty kick of freshness.",
+            "bg_color": "#e9f9d9",
+            "splash_img": "shopify://shop_images/water-splash.png",
+            "fruit_chunks_1": "shopify://shop_images/Lemon_slice__isolated_on_white_background___Premium_Photo-removebg-preview.png"
+          }
+        },
+        "flavor_q76QYR": {
+          "type": "flavor",
+          "settings": {
+            "product": "freezaboom-lemon-juice-330ml-copy",
+            "product_info": "Sweet, juicy watermelon for the perfect chill.",
+            "bg_color": "#FFE9ED",
+            "splash_img": "shopify://shop_images/watermelon-splash.png",
+            "fruit_chunks_1": "shopify://shop_images/watermelon-chunks.png"
+          }
+        },
+        "flavor_EmxQqb": {
+          "type": "flavor",
+          "settings": {
+            "product": "freezaboom-orange-juice-330ml",
+            "product_info": "Tropical mango with a smooth, sweet finish.",
+            "bg_color": "#FFF9D9",
+            "splash_img": "shopify://shop_images/mango-splash.png",
+            "fruit_chunks_1": "shopify://shop_images/sliced_mango_png-removebg-preview_1.png"
+          }
+        },
+        "flavor_icgMHK": {
+          "type": "flavor",
+          "settings": {
+            "product": "freezaboom-berry-punch-juice-330ml",
+            "product_info": "Bold berry blend that hits different.",
+            "bg_color": "#F1E6FF",
+            "splash_img": "shopify://shop_images/berry-splash.png",
+            "fruit_chunks_1": "shopify://shop_images/10_PNG_Raspberry_Clipart__Berry_Fruit_Images__Transparent_Background__Watercolor_Clip_Art__Instant_Download__Commercial_Use__Paper_craft-removebg-preview.png"
+          }
+        }
+      },
+      "block_order": [
+        "flavor_JqKeyM",
+        "flavor_q76QYR",
+        "flavor_EmxQqb",
+        "flavor_icgMHK"
+      ],
       "name": "FreezaBoom Flavors",
       "settings": {}
     },
