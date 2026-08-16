@@ -87,8 +87,51 @@
     },
     "freeza_benefits_ygKt9t": {
       "type": "freeza-benefits",
+      "blocks": {
+        "benefits_c6xymQ": {
+          "type": "benefits",
+          "settings": {
+            "card_image": "shopify://shop_images/Houmous__5eme_rencontre____Recette_de_Houmous__5eme_rencontre_-removebg-preview_1.png",
+            "card_title": "Real Fruit Flavor",
+            "card_text": "Made with real fruit flavors for a bold and authentic taste in every sip."
+          }
+        },
+        "benefits_PtVqjB": {
+          "type": "benefits",
+          "settings": {
+            "card_image": "shopify://shop_images/Pourquoi_les_seniors_de_ce_village_isole_d_Australie_ne_souffrent_pas_d_arthrose__-removebg-preview.png",
+            "card_title": "With Vitamin C",
+            "card_text": "Packed with Vitamin C to support your day and keep you feeling fresh."
+          }
+        },
+        "benefits_yJxXMj": {
+          "type": "benefits",
+          "settings": {
+            "card_image": "shopify://shop_images/Sugar_Free_free_icons_designed_by_Flat_Icons-removebg-preview.png",
+            "card_title": "No Added Sugar",
+            "card_text": "Enjoy the sweetness of fruit with no added sugar, no guilt, all good."
+          }
+        },
+        "benefits_jDajtn": {
+          "type": "benefits",
+          "settings": {
+            "card_image": "shopify://shop_images/Green_Leaves_Vector_Icon_Design_On_White_Background_Various_Shapes_Of_Green_Leaves_Of__And_Plants_Elements_For_Eco_And_Bio_Logos__Icons_Icons__White_Icons__Background_Icons_PNG_and_Ve.png",
+            "card_title": "100% Natural",
+            "card_text": "Made with natural ingredients you can trust. Clean, simple, and refreshing."
+          }
+        }
+      },
+      "block_order": [
+        "benefits_c6xymQ",
+        "benefits_PtVqjB",
+        "benefits_yJxXMj",
+        "benefits_jDajtn"
+      ],
       "name": "FreezaBoom Benefits",
-      "settings": {}
+      "settings": {
+        "section_btn_url": "",
+        "section_btn_title": "Learn More About Our Ingredients"
+      }
     },
     "product_list_fa6P9H": {
       "type": "product-list",
