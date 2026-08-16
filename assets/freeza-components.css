@@ -1,26 +1,26 @@
 
 .container {
-    margin: 0 auto;
-    width: 100%;
+    margin: 0 auto !important;
+    width: 100% !important;
 }
 @media (max-width: 576px) {
     .container {
-        max-width: 100%;
+        max-width: 100% !important;
     }
 }
 @media (min-width: 768px) {
     .container {
-        max-width: 720px;
+        max-width: 720px !important;
     }
 }
 @media (min-width: 992px) {
     .container {
-        max-width: 960px;
+        max-width: 960px !important;
     }
 }
 @media (min-width: 1200px) {
     .container {
-        max-width: 1140px;
+        max-width: 1140px !important;
     }
 }
 
@@ -101,12 +101,15 @@
 
 /* start freezaboom flavor card */
 .freeza-flavor-card {
-    max-width: 300px;
-    box-shadow: 0 0 10px 0px #eee;
+    box-shadow: 0 2px 15px -3px #ddd;
     border-radius: 16px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    transition: box-shadow 0.5s
+}
+.freeza-flavor-card:hover {
+    box-shadow: 0 0 15px -5px #9cff4b;
 }
 .freeza-flavor-card .product-image {
     position: relative;
@@ -118,6 +121,11 @@
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
+    transition: 0.6s;
+}
+.freeza-flavor-card:hover .product-image .splash-img {
+    transform: translateX(-50%) scale(1.5);
+    opacity: 0.5;
 }
 .freeza-flavor-card .product-image .ice-cube_1,
 .freeza-flavor-card .product-image .ice-cube_2 {
@@ -127,11 +135,13 @@
     top: 70%;
     left: 5%;
     width: 70px;
+    animation-delay: 4s;
 }
 .freeza-flavor-card .product-image .ice-cube_2 {
     top: 40%;
     left: 65%;
-    width: 50px
+    width: 50px;
+    animation-delay: 2s;
 }
 .freeza-flavor-card .product-image .fruit-chunks_1,
 .freeza-flavor-card .product-image .fruit-chunks_2 {
@@ -141,12 +151,35 @@
 .freeza-flavor-card .product-image .fruit-chunks_1 {
     left: 15%;
     top: 40%;
+    animation-delay: 1s;
 }
 .freeza-flavor-card .product-image .fruit-chunks_2 {
     left: 65%;
     top: 65%;
     width: 60px;
     rotate: -60deg;
+    animation-delay: 3s;
+}
+.freeza-flavor-card .product-image .splash-img,
+.freeza-flavor-card .product-image .bg-element {
+    opacity: 0.7;
+}
+.freeza-flavor-card .product-image .bg-element {
+    animation: chunks-motion 8s linear infinite both;
+}
+@keyframes chunks-motion {
+    0% {
+        transform: translate(10px, 10px) rotate(0deg);
+    }
+    33.3333% {
+        transform: translate(10px, -10px) rotate(10deg);
+    }
+    66.6666% {
+        transform: translate(-10px, 10px) rotate(20deg);
+    }
+    100% {
+        transform: translate(10px, 10px) rotate(0deg);
+    }
 }
 .freeza-flavor-card .product-image .image-holder {
     position: relative;
@@ -158,11 +191,11 @@
 .freeza-flavor-card .product-details {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 15px;
     flex-grow: 1;
 }
 .freeza-flavor-card .product-details .title {
-    margin: 0 0 15px 0;
+    margin: 0 0 10px 0;
     font-size: 16px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -173,7 +206,7 @@
     line-height: 1.3
 }
 .freeza-flavor-card .product-details .info {
-    margin: 0 0 15px 0;
+    margin: 0 0 10px 0;
     font-size: 12px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -187,3 +220,27 @@
 }
 
 /* end freezaboom flavor card */
+/* start freezaboom section title */
+.freeza-sec-header {
+    text-align: center;
+}
+.freeza-sec-header .sub-title {
+    color: var(--color-primary);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.freeza-sec-header .title {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 10px;
+    font-size: 40px;
+}
+.freeza-sec-header .title span {
+    color: var(--color-primary);
+}
+.freeza-sec-header p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.2;
+}
+/* end freezaboom section title */

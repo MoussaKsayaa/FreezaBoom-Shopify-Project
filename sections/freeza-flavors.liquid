@@ -4,9 +4,7 @@
 <div class="freeza-flavors">
     <div class="container">
         <div class="sec-header">
-            <span class="sub-title">⚡Flavor Experience⚡</span>
-            <h2 class="title">Explore The Flavors<br/><span>Feel The Boom!</span></h2>
-            <p>Every sip delivers an explosion of real fruit flavor,<br/>ice-cold refreshment, and unstoppable energy.</p>
+            {% render "freeza-sec-header", sec_sub_title: "Flavor Experience", sec_title_1: "Explore The Flavors", sec_title_2: "Feel The Boom!", sec_text_1: "Every sip delivers an explosion of real fruit flavor,", sec_text_2: "ice-cold refreshment, and unstoppable energy." %}
             <div class="bg-icons">
                 <div class="ice-cube_1"><img src="{{ 'ice-cube-1.png' |  asset_url }}" width="500" height="500" alt="" /></div>
                 <div class="ice-cube_2"><img src="{{ 'ice-cube-2.png' |  asset_url }}" width="500" height="500" alt="" /></div>
@@ -16,8 +14,16 @@
         </div>
         <div class="body">
             {% for block in section.blocks %}
-                {% render "freeza-flavor-card", product_image: block.settings.product.featured_image, product_name: block.settings.product.title, product_info: block.settings.product_info, bg_color: block.settings.bg_color, shopify_attr: block.shopify_attributes, splash_img: block.settings.splash_img, fruit_chunks_1: block.settings.fruit_chunks_1 %}
+                {% if block.settings.bg_color_type == "custom" %}
+                    {%  assign bg_color = block.settings.bg_color %}
+                    {% else %}
+                    {%  assign bg_color = block.settings.bg_color_selected %}
+                {% endif %}
+                {% render "freeza-flavor-card", product_image: block.settings.product_img, product_name: block.settings.product_title, product_info: block.settings.product_info, bg_color: bg_color, shopify_attr: block.shopify_attributes, splash_img: block.settings.splash_img, fruit_chunks_1: block.settings.fruit_chunks_1, product_link: block.settings.product_link %}
             {% endfor %}
+        </div>
+        <div class="all-flavors-btn">
+            {% render "freeza-btn",style: "primary" , text:"View All Flavors", url: section.settings.all_flavors_url, arrow: true %}
         </div>
     </div>
 </div>
@@ -25,15 +31,27 @@
 {% schema %}
 {
     "name": "FreezaBoom Flavors",
-    "settings": [],
+    "settings": [
+        {
+            "type": "url",
+            "id": "all_flavors_url",
+            "label": "All Flavors Url"
+        }
+    ],
     "blocks": [{
         "name": "Product Card",
         "type": "flavor",
         "settings": [
             {
-                "type": "product",
-                "id": "product",
+                "type": "image_picker",
+                "id": "product_img",
                 "label": "Product"
+            },
+            {
+                "type": "text",
+                "id": "product_title",
+                "label": "Product Title",
+                "info": "Type The Flavor"
             },
             {
                 "type": "text",
@@ -42,9 +60,48 @@
                 "info": "Keep the Info Short to Keep Design Beautiful"
             },
             {
+                "type": "select",
+                "id": "bg_color_type",
+                "label": "Background Color Source",
+                "options": [
+                    {
+                    "value": "preset",
+                    "label": "Preset Color"
+                    },
+                    {
+                    "value": "custom",
+                    "label": "Custom Color"
+                    }
+                ],
+                "default": "preset"
+            },
+            {
                 "type": "color",
                 "id": "bg_color",
-                "label": "Background Color",
+                "label": "Background Color"
+            },
+            {
+                "type": "select",
+                "id": "bg_color_selected",
+                "label": "Select Background Color",
+                "options": [
+                    {
+                        "value": "#E9F9D9",
+                        "label": "Lemon"
+                    },
+                    {
+                        "value": "#FCE3E8",
+                        "label": "Watermelon"
+                    },
+                    {
+                        "value": "#F9F6C8",
+                        "label": "Mango"
+                    },
+                    {
+                        "value": "#EEE1FA",
+                        "label": "Berry"
+                    }
+                ],
                 "default": "#E9F9D9"
             },
             {
@@ -56,6 +113,11 @@
                 "type": "image_picker",
                 "id": "fruit_chunks_1",
                 "label": "Fruit Chunks 1"
+            }, 
+            {
+                "type": "url",
+                "id": "product_link",
+                "label": "Product Link"
             }
         ],
         "limit": 4
