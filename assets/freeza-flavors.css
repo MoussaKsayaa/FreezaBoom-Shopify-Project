@@ -37,7 +37,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 20px 10px;
-    gap: 20px;
+    gap: var(--main-gap);
 }
 @media (max-width: 992px) {
     .freeza-flavors .body {
@@ -49,8 +49,4 @@
         padding: 30px 15px 0 15px;
         grid-template-columns: 1fr 1fr;
     }
-}
-.freeza-flavors .all-flavors-btn {
-    margin: 15px auto 0;
-    width: fit-content;
 }

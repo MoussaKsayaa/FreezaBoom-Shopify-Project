@@ -1,15 +1,69 @@
+{{ "freeza-benefits.css" | asset_url | stylesheet_tag }}
 
 <div class="freeza-benefits">
-{% render "freeza-sec-header", sec_sub_title: "Why FreezaBoom?", sec_title_1: "More Than a Drink.", sec_title_2: "It's a Boom", sec_text_1: "We combine real ingredients with bold flavors", sec_text_2: "to give you refreshment that hits different." %}
+    <div class="container">
+        {% render "freeza-sec-header", sec_sub_title: "Why FreezaBoom?", sec_title_1: "More Than a Drink.", sec_title_2: "It's a Boom", sec_text_1: "We combine real ingredients with bold flavors", sec_text_2: "to give you refreshment that hits different." %}
+        <div class="content">
+        {% for block in section.blocks %}
+            <div class="benefit-card" {{ block.shopify_attributes }}>
+                {% if block.settings.card_image != blank %}
+                    <div class="image-holder">{{ block.settings.card_image | image_url: width: 500 | image_tag: width: 500, height: 500, alt: "benefit card image"}}</div>
+                    {% else %}
+                    <div class="image-holder"><img src="{{ "lemon-benefit-img.png" | asset_url }}" width="500" height="500" alt="benefit card image"></div>
+                {% endif %}
+                <h4 class="title">{{ block.settings.card_title }}</h4>
+                <p class="text">{{ block.settings.card_text }}</p>
+            </div>
+        {% endfor %}
+        </div>
+        <div class="footer-sec-btn">
+            {% render "freeza-btn", url: section.settings.section_btn_url, style: "primary", text: section.settings.section_btn_title, arrow: true %}
+        </div>
+    </div>
 </div>
 
 
 {% schema %}
 {
     "name": "FreezaBoom Benefits",
-    "settings": [],
+    "settings": [{
+        "type": "url",
+        "id": "section_btn_url",
+        "label": "Section Button URL"
+    },
+    {
+        "type": "text",
+        "id": "section_btn_title",
+        "label": "Section Button Title",
+        "default": "Learn More About Our Ingredients"
+    }
+],
     "presets": [{
         "name": "FreezaBoom Benefits"
+    }],
+    "blocks": [{
+        "name": "Benefit Card",
+        "type": "benefits",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "card_image",
+                "label": "Card Image"
+            },
+            {
+                "type": "text",
+                "id": "card_title",
+                "label": "Card Title",
+                "default": "Real Fruit Flavor"
+            },
+            {
+                "type": "text",
+                "id": "card_text",
+                "label": "Card Info",
+                "default": "Made with real fruit flavors for a bold and authentic taste in every sip."
+            }
+        ],
+        "limit": 4
     }]
 }
 {% endschema %}

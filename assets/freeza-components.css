@@ -97,19 +97,23 @@
         transform: scale(1);
     }
 }
+.footer-sec-btn {
+    margin: 15px auto 0;
+    width: fit-content;
+}
 /* end freezaboom standard btn */
 
 /* start freezaboom flavor card */
 .freeza-flavor-card {
-    box-shadow: 0 2px 15px -3px #ddd;
-    border-radius: 16px;
+    box-shadow: var(--silver-shadow);
+    border-radius: var(--main-radius);
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: box-shadow 0.5s
+    transition: box-shadow var(--main-transition);
 }
 .freeza-flavor-card:hover {
-    box-shadow: 0 0 15px -5px #9cff4b;
+    box-shadow: var(--primary-shadow);
 }
 .freeza-flavor-card .product-image {
     position: relative;

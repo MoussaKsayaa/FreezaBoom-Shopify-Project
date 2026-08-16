@@ -23,31 +23,6 @@ body {
   --surface-transition-timing: var(--ease-out-quad);
   --submenu-animation-speed: 360ms;
   --submenu-animation-easing: cubic-bezier(0.25, 0.1, 0.25, 1);
-  /* Start custom vars for Freeza Theme */
-  /* Brand Colors */
-  --color-primary: #B6F400;
-  --color-primary-dark: #8ED600;
-  --color-yellow: #FFD73A;
-
-  /* Text */
-  --color-text: #171717;
-
-  /* Neutrals */
-  --color-white: #FFFFFF;
-  --color-bg: #F8FDFF;
-
-  /* Glass */
-  --color-glass: rgba(255,255,255,.35);
-  --color-border: rgba(255,255,255,.55);
-
-  /* Background Glow Colors */
-  --bg-blue-glow: #DFF8FF;
-  --bg-yellow-glow: #FFF8B8;
-  --bg-green-glow: #D8FFD2;
-  --bg-cyan-glow: #EAFBFF;
-  /* hero style */
-    --hero-glow: #FFF2A6;
-  /* End custom vars for Freeza Theme */
 }
 
 html {

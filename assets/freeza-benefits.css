@@ -1,0 +1,128 @@
+.freeza-benefits {
+    padding: 30px 0;
+    background-image: url("./freezaboom-benefits-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.freeza-benefits::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.4;
+}
+@media (max-width: 768px) {
+    .freeza-benefits::before {
+        opacity: 0.8;
+    }
+}
+.freeza-benefits .container {
+    position: relative;
+}
+.freeza-benefits .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--main-gap);
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.freeza-benefits .benefit-card {
+    width: calc(25% - 15px);
+    padding: 20px 15px;
+    box-shadow: var(--silver-shadow);
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--main-radius);
+    transition: var(--main-transition);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.829);
+}
+@media (max-width: 998px) {
+    .freeza-benefits .benefit-card {
+        width: calc(33.333% - 13.33333px);
+    }
+}
+@media (max-width: 768px) {
+    .freeza-benefits .benefit-card {
+        width: calc(50% - 10px);
+    }
+}
+@media (max-width: 576px) {
+    .freeza-benefits .benefit-card {
+        padding: 5px;
+    }
+}
+.freeza-benefits .benefit-card:hover {
+    box-shadow: var(--primary-shadow);
+    background-color: white;
+    scale: 1.02;
+}
+.freeza-benefits .benefit-card .image-holder {
+    aspect-ratio: 4 / 4;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid white;
+    margin: 0 auto;
+    box-shadow: var(--primary-shadow);
+    background-color: var(--benefit-card-1);
+}
+.freeza-benefits .benefit-card .image-holder img {
+    max-width: 100%;
+    height: auto;
+}
+.freeza-benefits .benefit-card .title {
+    text-transform: uppercase;
+    position: relative;
+    margin: 15px;
+    padding-bottom: 15px;
+    font-size: 22px;
+}
+.freeza-benefits .benefit-card .title::before {
+    content: "";
+    height: 3px;
+    width: 50px;
+    background-color: var(--color-primary);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 30px;
+}
+.freeza-benefits .benefit-card:first-of-type .image-holder {
+    background-color: var(--benefit-card-lite-1);
+}
+.freeza-benefits .benefit-card:first-of-type .title::before {
+    background-color: var(--benefit-card-1);
+}
+.freeza-benefits .benefit-card:nth-of-type(2) .image-holder {
+    background-color: var(--benefit-card-lite-2);
+}
+.freeza-benefits .benefit-card:nth-of-type(2) .title::before {
+    background-color: var(--benefit-card-2);
+}
+.freeza-benefits .benefit-card:nth-of-type(3) .image-holder {
+    background-color: var(--benefit-card-lite-3);
+}
+.freeza-benefits .benefit-card:nth-of-type(3) .title::before {
+    background-color: var(--benefit-card-3);
+}
+.freeza-benefits .benefit-card:nth-of-type(4) .image-holder {
+    background-color: var(--benefit-card-lite-4);
+}
+.freeza-benefits .benefit-card:nth-of-type(4) .title::before {
+    background-color: var(--benefit-card-4);
+}
+
+.freeza-benefits .benefit-card .title::before,
+.freeza-benefits .benefit-card .text {
+    margin: 0;
+    padding: 0 10px;
+    font-size: 12px;
+}

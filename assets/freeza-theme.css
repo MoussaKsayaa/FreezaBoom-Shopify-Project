@@ -1,0 +1,51 @@
+:root {
+/* Start custom vars for Freeza Theme */
+    /* Brand Colors */
+    --color-primary: #B6F400;
+    --color-primary-dark: #8ED600;
+    --color-yellow: #FFD73A;
+
+    /* Text */
+    --color-text: #171717;
+
+    /* Neutrals */
+    --color-white: #FFFFFF;
+    --color-bg: #F8FDFF;
+
+    /* Glass */
+    --color-glass: rgba(255,255,255,.35);
+    --color-border: rgba(255,255,255,.55);
+
+    /* Background Glow Colors */
+    --bg-blue-glow: #DFF8FF;
+    --bg-yellow-glow: #FFF8B8;
+    --bg-green-glow: #D8FFD2;
+    --bg-cyan-glow: #EAFBFF;
+    /* hero style */
+    --hero-glow: #FFF2A6;
+
+    /* box shadows */
+    --silver-shadow: 0 2px 15px -3px #ddd;
+    --primary-shadow: 0 0 15px -5px #9cff4b;
+
+    /* gap */
+    --main-gap: 20px;
+
+    /* border radius */
+    --main-radius: 16px;
+
+    /* transitions */
+    --main-transition: 0.5s;
+
+    /* benefits section colors */
+    --benefit-card-1: #B4F605;
+    --benefit-card-2: #6AC6F1;
+    --benefit-card-3: #FC6B98;
+    --benefit-card-4: #B4F609;
+    --benefit-card-lite-1: rgba(180 246 5 / 25%);
+    --benefit-card-lite-2: rgba(106 198 241 / 25%);
+    --benefit-card-lite-3: rgba(252 107 152 / 25%);
+    --benefit-card-lite-4: rgba(180 246 9 / 25%);
+
+/* End custom vars for Freeza Theme */
+}
