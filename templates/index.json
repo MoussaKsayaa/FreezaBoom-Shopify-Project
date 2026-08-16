@@ -85,6 +85,11 @@
         "all_flavors_url": "shopify://collections/all"
       }
     },
+    "freeza_benefits_ygKt9t": {
+      "type": "freeza-benefits",
+      "name": "FreezaBoom Benefits",
+      "settings": {}
+    },
     "product_list_fa6P9H": {
       "type": "product-list",
       "blocks": {
@@ -288,6 +293,7 @@
   "order": [
     "freeza_hero_RrACXq",
     "freeza_flavors_KXKyL9",
+    "freeza_benefits_ygKt9t",
     "product_list_fa6P9H"
   ]
 }
